@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GÓC NHÀ SỐ 8</title>
 
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    background: linear-gradient(135deg, #ffc3e8, #c3e7ff);
+    color: white;
+    padding: 17px;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav {background:white;padding:10px;text-align:center}
+  nav a {color:blue;text-decoration:none;margin:0 15px;font-weight:bold;font-size:22px}
+  nav a:hover {text-decoration:underline;background:linear-gradient(90deg,#fff7ad,#ffa9f9)}
+  
+  .manhinh {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffc3e8, #c3e7ff);
+    text-align: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s ease;
+    display: none;
+  }
+
+  .section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .next-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #fff7ad;
+    transition: 0.3s;
+  }
+
+  .next-btn:hover {
+    background: #ffa9f9;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1><img src="gocnhaso8.png" width="35"> - Góc nhà số 8</h1>
+  <div class="search-bar">
+    <input type="text" placeholder="Tìm kiếm...">
+    <button>🔍</button>
+  </div>
+</header>
+
+<nav>
+  <a href="#"> Trang chủ </a>
+  <a href="#"> Danh sách </a>
+  <a href="#"> Dòng thời gian </a>
+  <a href="https://www.youtube.com/@A8-K59THPT-LTK" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="100">
+  </a>
+  <a href="#">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_(2020).svg" width="30">
+  </a>
+</nav>
+
+<div class="manhinh">
+    <div class="section active">
+      <h1>Nơi khởi đầu mọi thứ</h1>
+      <p>5/9/2023</p>
+    </div>
+
+    <div class="section">
+      <h1>Sự kiện đầu tiên</h1>
+      <p>20/10/2023</p>
+    </div>
+
+    <div class="section">
+      <h1>Sự kiện tiếp theo</h1>
+      <p>30/12/2023</p>
+    </div>
+
+    <button class="next-btn" onclick="chuyenMoc()">Tiếp theo →</button>
+</div>
+
+<script>
+let index = 0;
+const sections = document.querySelectorAll('.section');
+
+function chuyenMoc() {
+  sections[index].classList.remove('active');
+  index = (index + 1) % sections.length;
+  sections[index].classList.add('active');
+}
+</script>
+
+</body>
+</html>
