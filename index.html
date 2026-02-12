@@ -226,7 +226,7 @@ function sau(){
   function moanh() {
     const div = document.createElement("div")
     div.id = "vungtoi"
-    div.innerHTML = "<img src:='"+this.src+"'>"
+    div.innerHTML = "<img src='"+ anh.src +"'>"
     document.body.appendChild(div)
     div.onclick = function() {document.body.removeChild(div)}
   }
