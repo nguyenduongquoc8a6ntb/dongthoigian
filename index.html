@@ -150,13 +150,17 @@ button.album-btn {
   <button class="album-btn" onclick="truoc()">⬅ Trước</button>
 
   <div class="noidung">
-    <img id="anh">
+    <img id="anh" onclick="moanh()">
     <p id="text"></p>
   </div>
 
   <button class="album-btn" onclick="sau()">Sau ➡</button>
 </div>
 
+<!-- Video -->
+<div class="video" id="video"> 
+  
+</div>
 <script>
 const pages = [
   {
@@ -204,6 +208,17 @@ function sau(){
     hientrang();
   }
 }
+
+  function moanh() {
+    const div = document.createElement("div")
+    div.id = "vungtoi"
+    div.innerHTML = "<img src:='"+this.src+"'>"
+    document.body.appendChild(div)
+    div.onclick = function() {document.body.removeChild(div)}
+  }
+    
+    
+  
 </script>
 
 </body>
