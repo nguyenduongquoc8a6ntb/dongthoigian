@@ -10,16 +10,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* ===== VIDEO NỀN ===== */
-video {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
 /* ===== HEADER ===== */
 header {
   background: linear-gradient(135deg, #ffc3e8, #c3e7ff);
@@ -48,6 +38,21 @@ nav a {
 nav a:hover {
   text-decoration: underline;
   background: linear-gradient(90deg,#fff7ad,#ffa9f9);
+}
+
+/* ===== VIDEO BANNER ===== */
+.video-bg {
+  width: 100%;
+  height: 70vh;       /* chỉnh cao thấp ở đây */
+  overflow: hidden;   /* cắt phần dư */
+  position: relative;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 120%;        /* phóng lớn hơn để cắt dưới */
+  object-fit: cover;
+  transform: translateY(-10%); /* kéo lên để mất logo */
 }
 
 /* ===== BÌA ===== */
@@ -86,6 +91,7 @@ nav a:hover {
   align-items: center;
   padding: 40px 100px;
   color: white;
+  background: #111;
 }
 
 .album img {
@@ -93,6 +99,7 @@ nav a:hover {
   height: 250px;
   object-fit: cover;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .noidung {
@@ -110,29 +117,27 @@ button.album-btn {
   border-radius: 15px;
   cursor: pointer;
 }
-  #vungtoi {
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.8);
-    display:flex;
-    justify-content:center;
-    align-items:center
+
+/* ===== PHÓNG TO ẢNH ===== */
+#vungtoi {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
 #vungtoi img {
-    max-width:90%;
-    max-height:90%;
-    border-radius:10px
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
 }
 </style>
 </head>
 
 <body>
-
-<!-- VIDEO -->
-<video autoplay muted loop>
-  <source src="anhdong.mp4" type="video/mp4">
-</video>
 
 <header>
   <h1><img src="gocnhaso8.png" width="35"> - Góc nhà số 8</h1>
@@ -146,13 +151,14 @@ button.album-btn {
   <a href="#"> Trang chủ </a>
   <a href="#"> Danh sách </a>
   <a href="#"> Dòng thời gian </a>
-  <a href="https://www.youtube.com/@A8-K59THPT-LTK" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="100">
-  </a>
-  <a href="#">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_(2020).svg" width="30">
-  </a>
 </nav>
+
+<!-- VIDEO NẰM DƯỚI NAV -->
+<div class="video-bg">
+  <video autoplay muted loop>
+    <source src="anhdong.mp4" type="video/mp4">
+  </video>
+</div>
 
 <!-- BÌA -->
 <div class="bia" id="bia">
@@ -171,24 +177,11 @@ button.album-btn {
   <button class="album-btn" onclick="sau()">Sau ➡</button>
 </div>
 
-<!-- Video -->
-<div class="video" id="video"> 
-  
-</div>
 <script>
 const pages = [
-  {
-    img:"https://picsum.photos/600/400?1",
-    text:"Trang 1: Cả lớp chụp hình đầu năm."
-  },
-  {
-    img:"https://picsum.photos/600/400?2",
-    text:"Trang 2: Tiết sinh hoạt cuối tuần."
-  },
-  {
-    img:"https://picsum.photos/600/400?3",
-    text:"Trang 3: Chuyến đi tham quan."
-  }
+  { img:"https://picsum.photos/600/400?1", text:"Trang 1: Cả lớp chụp hình đầu năm." },
+  { img:"https://picsum.photos/600/400?2", text:"Trang 2: Tiết sinh hoạt cuối tuần." },
+  { img:"https://picsum.photos/600/400?3", text:"Trang 3: Chuyến đi tham quan." }
 ];
 
 let tranghientai = 0;
@@ -223,17 +216,15 @@ function sau(){
   }
 }
 
-  function moanh() {
-    const div = document.createElement("div")
-    div.id = "vungtoi"
-    div.innerHTML = "<img src='"+ anh.src +"'>"
-    document.body.appendChild(div)
-    div.onclick = function() {document.body.removeChild(div)}
-  }
-    
-    
-  
+function moanh() {
+  const div = document.createElement("div")
+  div.id = "vungtoi"
+  div.innerHTML = "<img src='"+ anh.src +"'>"
+  document.body.appendChild(div)
+  div.onclick = function() { div.remove() }
+}
 </script>
 
 </body>
 </html>
+
