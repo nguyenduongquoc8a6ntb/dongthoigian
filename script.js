@@ -32,17 +32,21 @@ function hientrang(){
 }
 
 function truoc(){
-  if(tranghientai > 0){
-    tranghientai--;
-    hientrang();
+  tranghientai--;
+  // Quay lại trang cuối nếu đang ở trang đầu
+  if(tranghientai < 0){
+    tranghientai = pages.length - 1;
   }
+  hientrang();
 }
 
 function sau(){
-  if(tranghientai < pages.length - 1){
-    tranghientai++;
-    hientrang();
+  tranghientai++;
+  // Quay lại trang đầu nếu đang ở trang cuối
+  if(tranghientai >= pages.length){
+    tranghientai = 0;
   }
+  hientrang();
 }
 
   function moanh() {
