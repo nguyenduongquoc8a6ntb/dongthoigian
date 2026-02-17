@@ -26,7 +26,7 @@ const td = document.getElementById("td");
 
 function moAlbum() {
   bia.style.display = "none";
-  album.style.display = "flex";
+  album.style.display = "grid";
   hientrang();
 }
 
