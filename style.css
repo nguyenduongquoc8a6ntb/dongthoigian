@@ -73,8 +73,10 @@ nav a:hover {
 }
 
 /* ===== ALBUM ===== */
+
 .album {
-  display: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   align-items: center;
   padding: 40px 100px;
@@ -88,11 +90,22 @@ nav a:hover {
   border-radius: 15px;
 }
 
-.noidung {
+.trangtrai {
   background: rgba(0,0,0,0.6);
   padding: 30px;
   border-radius: 20px;
   text-align: center;
+  width: 400px;
+  height: 250px;
+}
+
+.trangphai {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
 button.album-btn {
