@@ -89,7 +89,7 @@ nav a:hover {
 .trang {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2px;
+  gap: 40px;
   min-width: 700px; /* đảm bảo luôn đủ 2 trang */
 }
 
