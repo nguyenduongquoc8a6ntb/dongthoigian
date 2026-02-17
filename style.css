@@ -130,3 +130,70 @@ button.album-btn {
     max-height:90%;
     border-radius:10px
 }
+
+
+
+
+
+
+
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 16px;
+    margin: 0 8px;
+  }
+
+  .bia {
+    height: 60vh;
+    padding: 20px;
+  }
+
+  .biasach {
+    width: 220px;
+    height: 300px;
+    font-size: 18px;
+  }
+
+  /* ===== ALBUM MOBILE ===== */
+  .album {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .album img {
+    width: 100%;
+    height: auto;
+  }
+
+  .trangtrai,
+  .trangphai {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .trangphai {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  button.album-btn {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  }
+      
