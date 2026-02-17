@@ -76,7 +76,7 @@ nav a:hover {
 
 .album {
   display: none;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:auto 1fr 1fr auto;
   justify-content: space-between;
   align-items: center;
   padding: 40px 100px;
