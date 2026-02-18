@@ -5,7 +5,13 @@ const pages = [
     images: [
       "https://picsum.photos/600/400?1",
       "https://picsum.photos/600/400?11",
-      "https://picsum.photos/600/400?12"
+      "https://picsum.photos/600/400?12",
+      "https://picsum.photos/600/400?1",
+      "https://picsum.photos/600/400?11",
+      "https://picsum.photos/600/400?12",
+      "https://picsum.photos/600/400?1",
+      "https://picsum.photos/600/400?11",
+      "https://picsum.photos/600/400?12",
     ]
   },
   {
@@ -13,14 +19,35 @@ const pages = [
     text: "Tiết sinh hoạt cuối tuần.",
     images: [
       "https://picsum.photos/600/400?2",
-      "https://picsum.photos/600/400?21"
+      "https://picsum.photos/600/400?21",
+      "https://picsum.photos/600/400?1",
+      "https://picsum.photos/600/400?11",
+      "https://picsum.photos/600/400?12",
+      "https://picsum.photos/600/400?1",
+      "https://picsum.photos/600/400?11",
+      "https://picsum.photos/600/400?12",
+      "https://picsum.photos/600/400?1",
+      "https://picsum.photos/600/400?11",
+      "https://picsum.photos/600/400?12",
     ]
   },
   {
     td: "20/11/2023",
     text: "Chuyến đi tham quan.",
     images: [
-      "https://picsum.photos/600/400?3"
+      "https://picsum.photos/600/400?3",
+      "https://picsum.photos/600/400?1",
+      "https://picsum.photos/600/400?11",
+      "https://picsum.photos/600/400?12",
+      "https://picsum.photos/600/400?1",
+      "https://picsum.photos/600/400?11",
+      "https://picsum.photos/600/400?12",
+      "https://picsum.photos/600/400?1",
+      "https://picsum.photos/600/400?11",
+      "https://picsum.photos/600/400?12",
+      "https://picsum.photos/600/400?1",
+      "https://picsum.photos/600/400?11",
+      "https://picsum.photos/600/400?12",
     ]
   }
 ];
