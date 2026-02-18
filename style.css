@@ -104,19 +104,28 @@ nav a:hover {
 /* Trang phải */
 .trangphai {
   background: rgba(0,0,0,0.6);
-  padding: 30px;
+  padding: 20px;
   border-radius: 20px;
+
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+
+  max-height: 500px;
   overflow-y: auto;
 }
 
 .trangphai img {
   width: 100%;
-  border-radius: 15px;
-  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
+.trangphai img:hover {
+  transform: scale(1.05);
+}
+
 
 /* ===== Nút bên dưới ===== */
 .nut {
