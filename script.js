@@ -2,7 +2,13 @@ const pages = [
   {
     td: "05/09/2023",
     img: "https://picsum.photos/600/400?1",
-    text: "Cả lớp chụp hình đầu năm."
+    text: "Cả lớp chụp hình đầu năm.",
+    img: "https://picsum.photos/600/400?",
+    img: "https://picsum.photos/600/400?",
+    img: "https://picsum.photos/600/400?",
+    img: "https://picsum.photos/600/400?",
+    img: "https://picsum.photos/600/400?",
+    img: "https://picsum.photos/600/400?"
   },
   {
     td: "20/10/2023",
