@@ -108,7 +108,8 @@ nav a:hover {
   border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px
+  gap: 30px;
+  overflow-y: auto;
 }
 
 .trangphai img {
