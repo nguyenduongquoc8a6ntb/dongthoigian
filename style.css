@@ -23,11 +23,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
+  }
 
 /* ================= NAV ================= */
 nav {
@@ -35,9 +31,7 @@ nav {
   padding: 10px;
   text-align: center;
   position: sticky;
-  top: 0;
-  z-index: 999;
-}
+ }
 
 nav a {
   color: blue;
