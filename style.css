@@ -17,22 +17,23 @@ video {
 
 /* ================= HEADER ================= */
 header {
-  background: rgba(255,255,255,.15);
-  backdrop-filter: blur(12px);
-
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-} 
+  background: linear-gradient(135deg,#ffc3e8,#c3e7ff);
+  color:white;
+  padding:17px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
 /* ================= NAV ================= */
 nav {
-  background: rgba(255,255,255,.75);
-  backdrop-filter: blur(12px);
+  background:white;
+  padding:10px;
+  text-align:center;
 
-  position: sticky;
-  top: 87px;
-  z-index: 999;
+  position:sticky;
+  top:0;
+  z-index:999;
 }
 
 nav a {
